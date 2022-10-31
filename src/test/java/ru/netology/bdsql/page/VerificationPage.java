@@ -28,5 +28,4 @@ public class VerificationPage {
         verificationCodeField.val(code);
         buttonEnter.click();
     }
-
 }

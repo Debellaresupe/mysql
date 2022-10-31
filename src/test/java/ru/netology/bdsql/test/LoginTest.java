@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import ru.netology.bdsql.data.DataBase;
 import ru.netology.bdsql.data.DataHelper;
+import ru.netology.bdsql.page.DashboardPage;
 import ru.netology.bdsql.page.LoginPage;
 
 
@@ -23,7 +24,7 @@ public class LoginTest {
         var verificationPage = loginPage.validLogin(authInfo);
         verificationPage.verifyVerificationPageVisibility();
         var verificationCode = DataBase.getValidVerifyCode();
-        verificationPage.validVerify(verificationCode.getVerifyCode());
+        verificationPage.validVerify(verificationCode.getVerifyCode()).visiblePage();
     }
 
     @Test
